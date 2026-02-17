@@ -1,0 +1,88 @@
+/* Tipografía general */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f0fff4, #e6f7ff);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    background: #1a1a1a;
+    color: #f5f5f5;
+}
+
+/* Títulos llamativos */
+h1, h2, h3 {
+    font-family: 'Baloo 2', cursive;
+    color: #2a7a2a;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
+    color: #7aff7a;
+}
+
+/* Secciones con estilo dinámico */
+.descripcion, .Caracteristicas, .Alimentacion {
+    padding: 25px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 800px;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Colores diferenciados */
+.descripcion {
+    background: linear-gradient(135deg, #a73636, #d94f4f);
+}
+
+.Caracteristicas {
+    background: linear-gradient(135deg, #36a736, #4fd94f);
+}
+
+.Alimentacion {
+    background: linear-gradient(135deg, #3636a7, #4f4fd9);
+}
+
+/* Hover dinámico */
+.descripcion:hover, .Caracteristicas:hover, .Alimentacion:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Botón moderno */
+button.mode {
+    display: block;
+    margin: 20px auto;
+    background: #2a7a2a;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button.mode:hover {
+    background: #36a736;
+    transform: translateY(-2px);
+}
+
+/* Animación sutil */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.descripcion, .Caracteristicas, .Alimentacion {
+    animation: fadeIn 0.8s ease-in-out;
+}
